@@ -60,6 +60,7 @@
                 // The person is not logged into your app or we are unable to tell.
                 document.getElementById('status').innerHTML = 'Please log ' +
                     'into this app.';
+                    FB.login();
                 }
             }
 
@@ -74,7 +75,7 @@
 
             window.fbAsyncInit = function() {
             FB.init({
-                appId      : '{387714388328615}',
+                appId      : '387714388328615',
                 cookie     : true,  // enable cookies to allow the server to access 
                                     // the session
                 xfbml      : true,  // parse social plugins on this page
@@ -120,33 +121,7 @@
             }
             </script>
 
-            
-            <?php if($usuario) { ?>
-                
-            <?php
-                //var_dump($usuario_profile);
-            ?>
-                
-            <?php
-        
-                $usuario_profile["gender"];
-        
-                // criar um banco de dados
-                // salvar os dados no banco de dados
-        
-            ?>
-            
-            Seja bem vindo <?=$usuario_profile["name"]?>! <a href="logout.php">Efetuar Logoff</a>            
-            <h1>Seu email: <?=$usuario_profile['email']?></h1>
-            
-            <?php } else { ?>
-            
-                <a href="<?=$url?>">Efetuar login usando Facebook</a>
-            
-            <?php } ?>
-
-
-                        <!--
+         <!--
             Below we include the Login Button social plugin. This button uses
             the JavaScript SDK to present a graphical Login button that triggers
             the FB.login() function when clicked.
