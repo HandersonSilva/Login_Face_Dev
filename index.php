@@ -3,8 +3,8 @@
     require('src/facebook.php');
     
     $face = new Facebook(array(
-        'appId' => '131535117502383',
-        'secret'=> '274a481b140984793a353262b64d95ef'
+        'appId' => '387714388328615',
+        'secret'=> 'e7c1a3a449ed2491a679c71cfbfada03'
     ));
 
     $usuario = $face->getUser();
