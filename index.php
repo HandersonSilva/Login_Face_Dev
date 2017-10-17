@@ -50,7 +50,7 @@
                 //testAPI();
                 } else if (response.status === 'not_authorized') {
                     loginFacebook(); 
-                    } else {
+                    } else if {
                     loginFacebook();          
                     }else {
                 // The person is not logged into your app or we are unable to tell.
