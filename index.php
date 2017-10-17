@@ -140,7 +140,7 @@
                     if (response.authResponse) {
                     initFacebook();
                     }       
-                }, {scope: 'email, user_photos, friends_about_me, read_friendlists, user_education_history, user_groups, user_interests, user_likes, friends_likes, user_work_history, user_online_presence' });
+                }, {scope: 'email, user_photos' });
                 }
             </script>
 
