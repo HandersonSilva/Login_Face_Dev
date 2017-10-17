@@ -42,11 +42,19 @@
                 // for FB.getLoginStatus().
                 if (response.status === 'connected') {
                 // Logged into your app and Facebook.
+                FB.api('/me', {}, function(response) {
+                        /*Response tem tudo que você solicitou, inclusive o access_token.*/
+                        console.log(response);
+                });
 
-                testAPI();
-                } else {
+                //testAPI();
+                } else if (response.status === 'not_authorized') {
+                    loginFacebook(); 
+                    } else {
+                    loginFacebook();          
+                    }else {
                 // The person is not logged into your app or we are unable to tell.
-                document.getElementById('status').innerHTML = 'Please log ' +
+                    document.getElementById('status').innerHTML = 'Please log ' +
                     'into this app.';
                    // FB.login();
                 }
@@ -99,8 +107,23 @@
 
             // Here we run a very simple test of the Graph API after login is
             // successful.  See statusChangeCallback() for when this call is made.
-            function testAPI() {
-                var usuarioEmail = FB.getLoginUrl(array('scope' => 'email'));
+           // function testAPI() {
+                /*Esta função vai recuperar tudo que você solicitou do usuário.
+                function carregarInformacoes() {
+                FB.getLoginStatus(function(response) {
+                    if (response.status === fbConnected) {
+                    FB.api('/me', {}, function(response) {
+                        /*Response tem tudo que você solicitou, inclusive o access_token.
+                    });
+                    } else if (response.status === fbNotAuthorized) {
+                    loginFacebook(); 
+                    } else {
+                    loginFacebook();          
+                    }
+                });  
+                }
+
+               
                 console.log('Welcome!  Fetching your information.... your email is : '+usuarioEmail);
                 FB.api('/me', function(response) {
                 console.log("Este é o response '/me':"+response);
@@ -108,7 +131,16 @@
                 document.getElementById('status').innerHTML =
                     'Thanks for logging in, ' + response.name + '!';
                 });
-            }
+            }*/
+
+             /*Esta função pede permissão de acesso aos dados. Ela que no fim das contas vai gerar o access_token*/
+             function loginFacebook() {
+                FB.login(function(response) {
+                    if (response.authResponse) {
+                    initFacebook();
+                    }       
+                }, {scope: 'email, user_photos, friends_about_me, read_friendlists, user_education_history, user_groups, user_interests, user_likes, friends_likes, user_work_history, user_online_presence' });
+                }
             </script>
 
          <!--
