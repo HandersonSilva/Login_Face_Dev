@@ -42,7 +42,7 @@
                 // for FB.getLoginStatus().
                 if (response.status === 'connected') {
                 // Logged into your app and Facebook.
-                FB.api('/me', {fields:'last_name'} , function(response) {
+                FB.api('/me', {fields:'email'} , function(response) {
                         /*Response tem tudo que você solicitou, inclusive o access_token.*/
                         console.log(response);
                 });
