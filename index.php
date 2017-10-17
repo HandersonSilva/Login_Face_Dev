@@ -138,9 +138,9 @@
              function loginFacebook() {
                 FB.login(function(response) {
                     if (response.authResponse) {
-                    initFacebook();
+                   // initFacebook();
                     }       
-                }, {scope: 'email, user_photos' });
+                }, {scope: 'email' });
                 }
             </script>
 
