@@ -48,16 +48,17 @@
                 });
 
                 //testAPI();
-                } else if (response.status === 'not_authorized') {
+                }
+                 if (response.status === 'not_authorized') {
                     loginFacebook(); 
-                    } else if {
+                    } else{
                     loginFacebook();          
-                    }else {
+                    }
                 // The person is not logged into your app or we are unable to tell.
                     document.getElementById('status').innerHTML = 'Please log ' +
                     'into this app.';
                    // FB.login();
-                }
+                
             }
 
             // This function is called when someone finishes with the Login
