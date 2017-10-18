@@ -45,9 +45,9 @@
                 FB.api('/me', {fields:'name,email'} , function(response) {
                         /*Response tem tudo que você solicitou, inclusive o access_token.*/
                         console.log(response);
-                        console.log('Successful login for: ' + response.name+" "+response.email);
+                        console.log('Successful login for: ' + response.name+"|"+response.email);
                         document.getElementById('status').innerHTML =
-                        'Thanks for logging in, ' + response.name + ' '+response.email;
+                        'Thanks for logging in, ' + response.name + ' | '+response.email;
                 });
 
                 //testAPI();
@@ -83,6 +83,9 @@
                                     // the session
                 xfbml      : true,  // parse social plugins on this page
                 version    : 'v2.8' // use graph api version 2.8
+            });
+            FB.Event.subscribe('auth.login', function () {
+            window.location = "http://handersonsilva.com";
             });
 
             // Now that we've initialized the JavaScript SDK, we call 
