@@ -42,21 +42,27 @@
                 // for FB.getLoginStatus().
                 if (response.status === 'connected') {
                 // Logged into your app and Facebook.
-                FB.api('/me', {fields:'email'} , function(response) {
+                FB.api('/me', {fields:'public_profile,email'} , function(response) {
                         /*Response tem tudo que você solicitou, inclusive o access_token.*/
                         console.log(response);
+                        console.log('Successful login for: ' + response.name+" "+response.email);
+                        document.getElementById('status').innerHTML =
+                        'Thanks for logging in, ' + response.name + ' '+response.email;
                 });
 
                 //testAPI();
                 }
                  if (response.status === 'not_authorized') {
-                    loginFacebook(); 
-                    } else{
-                    loginFacebook();          
-                    }
-                // The person is not logged into your app or we are unable to tell.
+                      // The person is not logged into your app or we are unable to tell.
                     document.getElementById('status').innerHTML = 'Please log ' +
                     'into this app.';
+                    loginFacebook(); 
+                    } else{
+                    document.getElementById('status').innerHTML = 'Please log ' +
+                    'into this app.';
+                    loginFacebook();          
+                    }
+               
                    // FB.login();
                 
             }
@@ -140,7 +146,7 @@
                     if (response.authResponse) {
                    // initFacebook();
                     }       
-                }, {scope: 'email' });
+                },{scope: 'public_profile, email' });
                 }
             </script>
 
@@ -148,8 +154,8 @@
             Below we include the Login Button social plugin. This button uses
             the JavaScript SDK to present a graphical Login button that triggers
             the FB.login() function when clicked.
-            -->
-
+           
+ -->
             <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
             </fb:login-button>
 
