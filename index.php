@@ -146,7 +146,7 @@
                     if (response.authResponse) {
                    // initFacebook();
                     }       
-                },{scope: 'public_profile, email' });
+                });
                 }
             </script>
 
