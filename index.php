@@ -33,8 +33,7 @@
         <body>
             <script>
                 <?php if(isset($_GET['l'] )&& $_GET['l']== 'true'){?>
-                    FB.logout(function(response){ // Person is now logged out 
-                     });
+                    FB.logout(function(response){  });
                 <?php }else{?>
                 // This is called with the results from from FB.getLoginStatus().
                 function statusChangeCallback(response) {
@@ -94,7 +93,7 @@
                 version    : 'v2.8' // use graph api version 2.8
             });
             //tamanho da janela
-            FB.Canvas.setSize({ width: 640, height: 480 });
+            FB.Canvas.setSize({ width: 400, height: 300 });
            
 
             // Now that we've initialized the JavaScript SDK, we call 
@@ -115,7 +114,7 @@
 
             };
 
-               <?php }?>
+           
           
 
             // Load the SDK asynchronously
@@ -162,7 +161,11 @@
                    // initFacebook();
                     }       
                 });
+                FB.Event.subscribe('auth.login', function () {
+                window.location = "http://handersonsilva.com/Login_Face_Dev/home.php";
+                });
                 }
+            <?php }?>
             </script>
 
          <!--
