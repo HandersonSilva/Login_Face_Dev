@@ -32,8 +32,12 @@
         </head>
         <body>
             <script>
-            // This is called with the results from from FB.getLoginStatus().
-            function statusChangeCallback(response) {
+                <?php if(isset($_GET['l'] )&& $_GET['l']== 'true'){?>
+                    FB.logout(function(response){ // Person is now logged out 
+                     });
+                <?php }else{?>
+                // This is called with the results from from FB.getLoginStatus().
+                function statusChangeCallback(response) {
                 console.log('statusChangeCallback');
                 console.log(response);
                 // The response object is returned with a status field that lets the
@@ -41,6 +45,7 @@
                 // Full docs on the response object can be found in the documentation
                 // for FB.getLoginStatus().
                 if (response.status === 'connected') {
+
                 // Logged into your app and Facebook.
                 FB.api('/me', {fields:'name,email'} , function(response) {
                         /*Response tem tudo que você solicitou, inclusive o access_token.*/
@@ -48,6 +53,10 @@
                         console.log('Successful login for: ' + response.name+"|"+response.email);
                         document.getElementById('status').innerHTML =
                         'Thanks for logging in, ' + response.name + ' | '+response.email;
+                });
+                //redirecionar para outra pagina
+                FB.Event.subscribe('auth.login', function () {
+                window.location = "http://handersonsilva.com/Login_Face_Dev/home.php";
                 });
 
                 //testAPI();
@@ -84,9 +93,9 @@
                 xfbml      : true,  // parse social plugins on this page
                 version    : 'v2.8' // use graph api version 2.8
             });
-            FB.Event.subscribe('auth.login', function () {
-            window.location = "http://handersonsilva.com";
-            });
+            //tamanho da janela
+            FB.Canvas.setSize({ width: 640, height: 480 });
+           
 
             // Now that we've initialized the JavaScript SDK, we call 
             // FB.getLoginStatus().  This function gets the state of the
@@ -105,6 +114,9 @@
             });
 
             };
+
+               <?php }?>
+          
 
             // Load the SDK asynchronously
             (function(d, s, id) {
