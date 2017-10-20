@@ -1,7 +1,7 @@
 <?php
     session_start();
     
-    $_SESSION['login_face']="<script> document.write (loginFace) </ script>" ;
+    $_SESSION['login_face']="<script> document.write(loginFace);</ script>";
 
     echo  $_SESSION['login_face'];
     
