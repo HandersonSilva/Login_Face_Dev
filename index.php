@@ -7,15 +7,7 @@
             <script type="text/javascript" src="script/login.js"></script>
         </head>
         <body>
-        <?php
-                session_start();
-                
-                $_SESSION['login_face']="<script> document.write(loginFace);</ script>";
-
-                echo  $_SESSION['login_face'];
-    
-    
-?>
+       
 
          <!--
             Below we include the Login Button social plugin. This button uses
@@ -27,7 +19,16 @@
             </fb:login-button>
 
             <div id="status">
-             </div>
+            </div>
+            <?php
+                session_start();
+                
+                $_SESSION['login_face']="<script> document.write(loginFace);</ script>";
+
+                echo  $_SESSION['login_face'];
+    
+    
+              ?>
             
         </body>
     </html>
