@@ -23,7 +23,7 @@
          //redirect for home
         window.location = "http://handersonsilva.com/Login_Face_Dev/home.php";
       
-        } else if(response.status === 'unknown'){
+        } else if(response.status === 'unknown'&& response.status != 'connected'){
         window.location = "http://handersonsilva.com/Login_Face_Dev/home.php";      
         }
    
