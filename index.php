@@ -52,9 +52,9 @@
                         'Thanks for logging in, ' + response.name + ' | '+response.email;
                 });*/
                 //redirecionar para outra pagina
-                FB.Event.subscribe('auth.login', function () {
+              
                 window.location = "http://handersonsilva.com/Login_Face_Dev/home.php";
-                });
+               
 
                 //testAPI();
                 }
@@ -69,7 +69,7 @@
                     loginFacebook();          
                     }
                
-                   // FB.login();
+                
                 
             }
 
@@ -156,12 +156,12 @@
              function loginFacebook() {
                 FB.login(function(response) {
                     if (response.authResponse) {
-                   console.log (response.authResponse);
+                  
                     }       
                 });
-               /* FB.Event.subscribe('auth.login', function () {
+                FB.Event.subscribe('auth.login', function () {
                 window.location = "http://handersonsilva.com/Login_Face_Dev/home.php";
-                });*/
+                });
                 }
            
             </script>
