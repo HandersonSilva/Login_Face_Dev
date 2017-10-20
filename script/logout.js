@@ -19,12 +19,12 @@
  
    
     }
-     if (response.status === 'not_authorized' && response.status != 'connected') {
+     if (response.status === 'not_authorized') {
          //redirect for home
-        window.location = "http://handersonsilva.com/Login_Face_Dev/home.php";
+        window.location = "http://handersonsilva.com/Login_Face_Dev/";
       
-        } else if(response.status === 'unknown'&& response.status != 'connected'){
-        window.location = "http://handersonsilva.com/Login_Face_Dev/home.php";      
+        } else if(response.status === 'unknown'){
+        window.location = "http://handersonsilva.com/Login_Face_Dev/";      
         }
    
     
