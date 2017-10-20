@@ -156,7 +156,7 @@
              function loginFacebook() {
                 FB.login(function(response) {
                     if (response.authResponse) {
-                   console.log"AuthResponse=".response.authResponse;
+                   console.log("AuthResponse=".response.authResponse);
                     }       
                 });
                /* FB.Event.subscribe('auth.login', function () {
