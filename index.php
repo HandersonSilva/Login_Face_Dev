@@ -32,9 +32,7 @@
         </head>
         <body>
             <script>
-                <?php if(isset($_GET['l'] )&& $_GET['l']== 'true'){?>
-                    FB.logout(function(response){  });
-                <?php }else{?>
+               
                 // This is called with the results from from FB.getLoginStatus().
                 function statusChangeCallback(response) {
                 console.log('statusChangeCallback');
@@ -158,14 +156,14 @@
              function loginFacebook() {
                 FB.login(function(response) {
                     if (response.authResponse) {
-                   // initFacebook();
+                   console.log"AuthResponse=".response.authResponse;
                     }       
                 });
-                FB.Event.subscribe('auth.login', function () {
+               /* FB.Event.subscribe('auth.login', function () {
                 window.location = "http://handersonsilva.com/Login_Face_Dev/home.php";
-                });
+                });*/
                 }
-            <?php }?>
+           
             </script>
 
          <!--

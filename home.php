@@ -12,13 +12,29 @@
                 js.src = "//connect.facebook.net/en_US/sdk.js";
                 fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));
-        
-    
+                        
+                // In your onload method:
+                FB.Event.subscribe('auth.login', login_event);
+                FB.Event.subscribe('auth.logout', logout_event);
+
+                // In your JavaScript code:
+                var login_event = function(response) {
+                console.log("login_event");
+                console.log(response.status);
+                console.log(response);
+                }
+
+                var logout_event = function(response) {
+                console.log("logout_event");
+                console.log(response.status);
+                console.log(response);
+                }
+                    
     </script>
         <h1>LOGADO COM SUCESSO!!!</h1>
 
-        <a id="logout" href="http://handersonsilva.com/Login_Face_Dev/index.php?l=true">Logout</a>
-        <fb:logout-button id="logout" onlogi>
-        </fb:logout-button>
+       
+        <input type="button" value="Logout" onclick="FB.logout();">
+       
     </body>
 </html>
