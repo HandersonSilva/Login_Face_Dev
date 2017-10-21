@@ -1,25 +1,4 @@
 
- <?php 
-        session_start();
-        $_SESSION['login_face'] = "Pulou o if";
-        $script ="<script type='text/javascript' src='script/login.js'></script>";
-        
-        echo $script;
-       do{
-        $loginFace = "<script> document.write(loginFace);</script>";
-        if($loginFace == 'connected'){
-            $_SESSION['login_face'] = 'connected';
-        }else{
-            $_SESSION['login_face'] = 'Not connected';
-        }
-       }while($loginFace == 'connected');
-       
-
-        echo $loginFace;
-       
-       echo $_SESSION['login_face'];
- 
- ?>
 <!DOCTYPE html>
     <html>
         <head>
@@ -35,7 +14,7 @@
             the FB.login() function when clicked.
            
  -->
-            <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+            <fb:login-button scope="public_profile,email" onlogin="checkLoginState();" autologoutlink="true">
             </fb:login-button>
             
          

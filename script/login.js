@@ -1,8 +1,4 @@
   
-var  loginFace = "pegou primeiro";
-alert("entrou no js");
-
-"<?php echo 'codigo php dentro do java de certo';?>"
   // This is called with the results from from FB.getLoginStatus().
   function statusChangeCallback(response) {
     console.log('statusChangeCallback');
@@ -12,15 +8,15 @@ alert("entrou no js");
     // Full docs on the response object can be found in the documentation
     // for FB.getLoginStatus().
     if (response.status === 'connected') {
-        loginFace = 'connected';
+       
     // Logged into your app and Facebook.
-   /* FB.api('/me', {fields:'name,email'} , function(response) {
-            /*Response tem tudo que você solicitou, inclusive o access_token.
+   FB.api('/me', {fields:'name,email'} , function(response) {
+            //Response tem tudo que você solicitou, inclusive o access_token.
             console.log(response);
             console.log('Successful login for: ' + response.name+"|"+response.email);
             document.getElementById('status').innerHTML =
             'Thanks for logging in, ' + response.name + ' | '+response.email;
-    });*/
+    });
     //redirecionar para outra pagina
   
    // window.location = "http://handersonsilva.com/login_face/home.php";
@@ -29,16 +25,16 @@ alert("entrou no js");
    
     }
      if (response.status === 'not_authorized') {
-        loginFace = 'not_authorized';
+       
           // The person is not logged into your app or we are unable to tell.
         document.getElementById('status').innerHTML = 'Please log ' +
         'into this app.';
-        loginFacebook(); 
+       // loginFacebook(); 
         } else{
-            loginFace = 'not_authorized'
+           
         document.getElementById('status').innerHTML = 'Please log ' +
         'into this app.';
-        loginFacebook();          
+             
         }
    
     
@@ -62,8 +58,7 @@ FB.init({
     xfbml      : true,  // parse social plugins on this page
     version    : 'v2.8' // use graph api version 2.8
 });
-//tamanho da janela
-FB.Canvas.setSize({ width: 400, height: 300 });
+
 
 
 // Now that we've initialized the JavaScript SDK, we call 
@@ -96,45 +91,19 @@ FB.getLoginStatus(function(response) {
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
-// Here we run a very simple test of the Graph API after login is
-// successful.  See statusChangeCallback() for when this call is made.
-// function testAPI() {
-    /*Esta função vai recuperar tudo que você solicitou do usuário.
-    function carregarInformacoes() {
-    FB.getLoginStatus(function(response) {
-        if (response.status === fbConnected) {
-        FB.api('/me', {}, function(response) {
-            /*Response tem tudo que você solicitou, inclusive o access_token.
-        });
-        } else if (response.status === fbNotAuthorized) {
-        loginFacebook(); 
-        } else {
-        loginFacebook();          
-        }
-    });  
-    }
 
-   
-    console.log('Welcome!  Fetching your information.... your email is : '+usuarioEmail);
-    FB.api('/me', function(response) {
-    console.log("Este é o response '/me':"+response);
-    console.log('Successful login for: ' + response.name+" "+usuarioEmail);
-    document.getElementById('status').innerHTML =
-        'Thanks for logging in, ' + response.name + '!';
-    });
-}*/
 
- /*Esta função pede permissão de acesso aos dados. Ela que no fim das contas vai gerar o access_token*/
- function loginFacebook() {
+ //função login
+ /*function loginFacebook() {
     FB.login(function(response) {
         if (response.authResponse) {
       
         }       
-    });
+    });*/
     FB.Event.subscribe('auth.login', function () {
       loginFace = 'connected';
   //  window.location = "http://handersonsilva.com/login_face/home.php";
     });
-    }
+   // }
 
 
