@@ -10,7 +10,7 @@
     // Full docs on the response object can be found in the documentation
     // for FB.getLoginStatus().
     if (response.status === 'connected') {
-        loginFace = 'connected';
+       var loginFace = 'connected';
     // Logged into your app and Facebook.
    /* FB.api('/me', {fields:'name,email'} , function(response) {
             /*Response tem tudo que você solicitou, inclusive o access_token.
@@ -128,7 +128,7 @@ FB.getLoginStatus(function(response) {
         }       
     });
     FB.Event.subscribe('auth.login', function () {
-     loginFace = 'connected';
+     var loginFace = 'connected';
   //  window.location = "http://handersonsilva.com/Login_Face_Dev/home.php";
     });
     }
