@@ -20,6 +20,7 @@
          
 
             <div id="status">
+            <p>Verifique o que está acontecendo pelo console...</p>
             </div>
 
             
