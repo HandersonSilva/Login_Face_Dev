@@ -21,7 +21,7 @@
     });*/
     //redirecionar para outra pagina
   
-    window.location = "http://handersonsilva.com/Login_Face_Dev/home.php";
+   // window.location = "http://handersonsilva.com/Login_Face_Dev/home.php";
    
 
    
@@ -129,7 +129,7 @@ FB.getLoginStatus(function(response) {
     });
     FB.Event.subscribe('auth.login', function () {
    
-    window.location = "http://handersonsilva.com/Login_Face_Dev/home.php";
+  //  window.location = "http://handersonsilva.com/Login_Face_Dev/home.php";
     });
     }
 

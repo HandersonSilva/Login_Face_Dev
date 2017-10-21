@@ -10,7 +10,7 @@ session_start();
     </head>
     <body>
 
-    <?php if(  isset($_SESSION['login_face'])&& $_SESSION['login_face']== 'connected'){ echo $_SESSION['login_face'];?>
+    <?php if($_SESSION['login_face']== 'connected'){ echo $_SESSION['login_face'];?>
         <h1>LOGADO COM SUCESSO!!!</h1>
 
         <div id="status">
