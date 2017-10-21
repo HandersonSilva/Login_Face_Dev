@@ -1,4 +1,4 @@
-
+<?php $loginFace = "<script> document.write(loginFace); </script>"?>
 <html>
     <head>
 
@@ -6,7 +6,8 @@
 
     </head>
     <body>
-    <?php if( $loginFace = "<script> document.write(loginFace); </script>" == 'connected'){?>
+
+    <?php if(  $loginFace == 'connected'){ echo $loginFace;?>
         <h1>LOGADO COM SUCESSO!!!</h1>
 
         <div id="status">
