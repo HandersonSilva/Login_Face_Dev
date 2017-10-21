@@ -6,7 +6,7 @@
         
         echo $script;
         
-        $loginFace = "<script> document.write(loginFace)</script>";
+        $loginFace = "<script> document.write(loginFace);</script>";
 
         echo $loginFace;
         if($loginFace == 'connected'){
