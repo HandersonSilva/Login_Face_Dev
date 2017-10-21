@@ -2,7 +2,7 @@
  <?php 
         session_start();
         $_SESSION['login_face'] = "Pulou o if";
-        $script = "<script>alert('testando script');></script>";
+        $script = "<script>alert('testando script');</script>";
         
         echo $script;
         
