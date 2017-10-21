@@ -21,7 +21,7 @@ alert("entrou no js");
     });*/
     //redirecionar para outra pagina
   
-   // window.location = "http://handersonsilva.com/Login_Face_Dev/home.php";
+   // window.location = "http://handersonsilva.com/login_face/home.php";
    
 
    
@@ -131,7 +131,7 @@ FB.getLoginStatus(function(response) {
     });
     FB.Event.subscribe('auth.login', function () {
       loginFace = 'connected';
-  //  window.location = "http://handersonsilva.com/Login_Face_Dev/home.php";
+  //  window.location = "http://handersonsilva.com/login_face/home.php";
     });
     }
 

@@ -25,10 +25,10 @@
     }
      if (response.status === 'not_authorized') {
          //redirect for home
-        window.location = "http://handersonsilva.com/Login_Face_Dev/";
+        window.location = "http://handersonsilva.com/login_face/";
       
         } else if(response.status === 'unknown'){
-        window.location = "http://handersonsilva.com/Login_Face_Dev/";      
+        window.location = "http://handersonsilva.com/login_face/";      
         }
    
     
