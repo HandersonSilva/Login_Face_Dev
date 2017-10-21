@@ -5,15 +5,18 @@
         $script ="<script type='text/javascript' src='script/login.js'></script>";
         
         echo $script;
-        
+       do{
         $loginFace = "<script> document.write(loginFace);</script>";
-
-        echo $loginFace;
         if($loginFace == 'connected'){
             $_SESSION['login_face'] = 'connected';
         }else{
             $_SESSION['login_face'] = 'Not connected';
         }
+       }while($loginFace == 'connected');
+       
+
+        echo $loginFace;
+       
        echo $_SESSION['login_face'];
  
  ?>
