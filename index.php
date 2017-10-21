@@ -3,7 +3,7 @@
     <html>
         <head>
             <title>Login usando Facebook</title>
-            
+            <script type="text/javascript" src="script/login.js"></script>
         </head>
         <body>
        
