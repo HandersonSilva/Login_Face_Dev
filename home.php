@@ -1,4 +1,6 @@
-
+<?php 
+session_start();
+?>
 <html>
     <head>
 
@@ -7,7 +9,7 @@
     </head>
     <body>
     
-        <h1>LOGADO COM SUCESSO!!!</h1>
+        <h1>LOGADO COM SUCESSO!!!|Status=<?=$_SESSION['loginFace']?></h1>
 
         <div id="status">
         </div>
