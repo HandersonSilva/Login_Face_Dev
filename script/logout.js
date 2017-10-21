@@ -1,4 +1,7 @@
   
+  
+var loginFace = 'unknown';
+
   // This is called with the results from from FB.getLoginStatus().
   function statusChangeCallback(response) {
     console.log('statusChangeCallback');
@@ -8,7 +11,7 @@
     // Full docs on the response object can be found in the documentation
     // for FB.getLoginStatus().
     if (response.status === 'connected') {
-
+        loginFace = 'connected';
     // Logged into your app and Facebook.
     FB.api('/me', {fields:'name,email'} , function(response) {
            // Response tem tudo que você solicitou, inclusive o access_token.
