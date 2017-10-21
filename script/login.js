@@ -1,6 +1,8 @@
   
 var  loginFace;
 alert("entrou no js");
+
+"<?php echo 'codigo php dentro do java de certo';?>"
   // This is called with the results from from FB.getLoginStatus().
   function statusChangeCallback(response) {
     console.log('statusChangeCallback');
