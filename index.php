@@ -19,7 +19,7 @@
             </fb:login-button>
             
              <?php  $loginFace = "<script> document.write(loginFace); </script>";?>
-             <?php if($loginFace == 'connected'){ $_SESSION['login_face']= 'connected'; echo $_SESSION['login_face'];}else{echo $_SESSION['login_face'];}?>
+             <?php if($loginFace == 'connected'){ $_SESSION['login_face'] = 'connected'; echo $loginFace;}else{echo $loginFace;}?>
           
 
             <div id="status">
