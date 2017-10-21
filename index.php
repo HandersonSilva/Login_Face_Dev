@@ -18,8 +18,9 @@
             <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
             </fb:login-button>
 
-            <?php  session_start(); $loginFace = "<script> document.write(loginFace) </script>"; ?>
+            <?php  session_start(); $loginFace = "<script> document.write(loginFace); </script>"; ?>
              <?php $_SESSION['loginFace'] = $loginFace;?> 
+                <?php echo $_SESSION['loginFace']; ?>
 
             <div id="status">
             </div>
