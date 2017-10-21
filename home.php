@@ -18,6 +18,8 @@ session_start();
 
     <?php } else{  echo $_SESSION['login_face'];?>
         <!--<script>  window.location = "http://handersonsilva.com/Login_Face_Dev/"; </script>-->
+        <div id="status">
+        </div>
     <?php }?>
        
         <input type="button" value="Logout" onclick="FB.logout();">
