@@ -2,11 +2,11 @@
  <?php 
         session_start();
         $_SESSION['login_face'] = "Pulou o if";
-        $script = "<script type='text/javascript' src='script/login.js'></script>";
+        $script = "<alert('testando script');></script>";
         
         echo $script;
         
-        $loginFace = "<script> document.write(loginFace)</script>";
+       // $loginFace = "<script> document.write(loginFace)</script>";
         if($loginFace == 'connected'){
             $_SESSION['login_face'] = 'connected';
         }else{
