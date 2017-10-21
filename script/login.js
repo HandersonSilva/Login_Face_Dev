@@ -1,5 +1,5 @@
   
-var  loginFace;
+var  loginFace = "pegou primeiro";
 alert("entrou no js");
 
 "<?php echo 'codigo php dentro do java de certo';?>"
