@@ -1,5 +1,5 @@
 
-
+ <?php session_start();?>
 <!DOCTYPE html>
     <html>
         <head>
@@ -17,7 +17,9 @@
  -->
             <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
             </fb:login-button>
-
+            
+             <?php $loginFace = "<script> document.write(loginFace); </script>"?>
+             <?php if($loginFace == 'connected'){ $_SESSION['login_face']= 'connected';}?>
           
 
             <div id="status">

@@ -1,6 +1,6 @@
   
   
-var loginFace = 'unknown';
+
 
   // This is called with the results from from FB.getLoginStatus().
   function statusChangeCallback(response) {
@@ -11,7 +11,7 @@ var loginFace = 'unknown';
     // Full docs on the response object can be found in the documentation
     // for FB.getLoginStatus().
     if (response.status === 'connected') {
-        loginFace = 'connected';
+        
     // Logged into your app and Facebook.
     FB.api('/me', {fields:'name,email'} , function(response) {
            // Response tem tudo que você solicitou, inclusive o access_token.
@@ -77,7 +77,7 @@ window.fbAsyncInit = function() {
     }(document, 'script', 'facebook-jssdk'));
 
     FB.Event.subscribe('auth.logout', logout_event);
-        window.location = "http://handersonsilva.com/Login_Face_Dev/";
+       // window.location = "http://handersonsilva.com/Login_Face_Dev/";
     
         var logout_event = function(response) {
         console.log("logout_event");

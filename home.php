@@ -1,4 +1,7 @@
-<?php $loginFace = "<script> document.write(loginFace); </script>"?>
+<?php
+session_start();
+
+?>
 <html>
     <head>
 
@@ -7,7 +10,7 @@
     </head>
     <body>
 
-    <?php if(  $loginFace == 'connected'){ echo $loginFace;?>
+    <?php if(  isset($_SESSION['login_face'])&& $_SESSION['login_face']== 'connected'){ ?>
         <h1>LOGADO COM SUCESSO!!!</h1>
 
         <div id="status">
