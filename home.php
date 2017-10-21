@@ -1,7 +1,4 @@
-<?php 
-session_start();
-echo $_SESSION['loginFace'];
-?>
+
 <html>
     <head>
 
@@ -9,11 +6,16 @@ echo $_SESSION['loginFace'];
 
     </head>
     <body>
-    
-        <h1>LOGADO COM SUCESSO!!!|Status=<?php echo $_SESSION['loginFace'];?></h1>
+    <?php if( $loginFace = "<script> document.write(loginFace); </script>" == 'connected'){?>
+        <h1>LOGADO COM SUCESSO!!!</h1>
 
         <div id="status">
         </div>
+
+    <?php } else{?>
+        <script>  window.location = "http://handersonsilva.com/Login_Face_Dev/"; </script>
+    <?php }?>
+       
         <input type="button" value="Logout" onclick="FB.logout();">
 
         <fb:login-button autologoutlink="true"></fb:login-button>
