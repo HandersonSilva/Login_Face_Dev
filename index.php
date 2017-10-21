@@ -7,6 +7,8 @@
         echo $script;
         
         $loginFace = "<script> document.write(loginFace)</script>";
+
+        echo $loginFace;
         if($loginFace == 'connected'){
             $_SESSION['login_face'] = 'connected';
         }else{
