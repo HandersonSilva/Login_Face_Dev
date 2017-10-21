@@ -1,13 +1,3 @@
-<?php
-
-session_start();
-
-if(isset($_SESSION['login_face']) && $_SESSION['login_face']=='unknown'){
-    "<script>  window.location = 'http://handersonsilva.com/Login_Face_Dev/'; </ script>" ;
-}
-
-
-?>
 
 <html>
     <head>

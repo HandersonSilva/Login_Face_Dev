@@ -1,3 +1,4 @@
+  
   // This is called with the results from from FB.getLoginStatus().
   function statusChangeCallback(response) {
     console.log('statusChangeCallback');
@@ -21,10 +22,10 @@
     }
      if (response.status === 'not_authorized') {
          //redirect for home
-       // window.location = "http://handersonsilva.com/Login_Face_Dev/";
+        window.location = "http://handersonsilva.com/Login_Face_Dev/";
       
         } else if(response.status === 'unknown'){
-       // window.location = "http://handersonsilva.com/Login_Face_Dev/";      
+        window.location = "http://handersonsilva.com/Login_Face_Dev/";      
         }
    
     
@@ -80,6 +81,6 @@ window.fbAsyncInit = function() {
         console.log(response);
     }
 
-   /* FB.Event.subscribe('auth.login', function () {
-        window.location = "http://handersonsilva.com/Login_Face_Dev/home.php";
-    });*/
+    FB.Event.subscribe('auth.logout', function () {
+        window.location = "http://handersonsilva.com/Login_Face_Dev/";
+    });
