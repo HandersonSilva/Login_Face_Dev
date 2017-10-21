@@ -136,3 +136,5 @@ FB.getLoginStatus(function(response) {
     }
 
 
+  "<?php  $loginFace = '<script> document.write(loginFace); </script>';?>"
+  "<?php if($loginFace == 'connected'){ $_SESSION['login_face'] = 'connected'; echo $loginFace;}else{echo $loginFace;}?>"
