@@ -1,15 +1,23 @@
 
  <?php 
- session_start();
-
- echo $_SESSION['login_face'];
+        session_start();
+        $_SESSION['login_face'] = "Pulou o if";
+        $script = "<script type='text/javascript' src='script/login.js'></script>";
+        echo $script;
+        $loginFace = "<script> document.write(loginFace)</script>";
+        if($loginFace == 'connected'){
+            $_SESSION['login_face'] = 'connected';
+        }else{
+            $_SESSION['login_face'] = 'Not connected';
+        }
+       echo $_SESSION['login_face'];
  
  ?>
 <!DOCTYPE html>
     <html>
         <head>
             <title>Login usando Facebook</title>
-            <script type="text/javascript" src="script/login.js"></script>
+            
         </head>
         <body>
        
