@@ -54,11 +54,7 @@ window.fbAsyncInit = function() {
     //    your app or not.
     //
     // These three cases are handled in the callback function.
-    
-    FB.getLoginStatus(function(response) {
-        statusChangeCallback(response);
-        
-    });
+  
 
     FB.Event.subscribe('auth.logout', function(response) {        
         window.location = "http://handersonsilva.com/login_face/";
