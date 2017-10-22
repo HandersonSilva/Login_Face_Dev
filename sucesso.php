@@ -2,8 +2,8 @@
     session_start();
     $statusLogin = isset($_SESSION['userLogin'])?$_SESSION['userLogin']:"";
     if( $statusLogin != 'connected'){
-        echo "<script> alert("Você não está autorizado a acessar esta pagina!!!")</script>";
-        header('Location: http://handersonsilva.com/login_face/');
+       $_SESSION['not_logged'] = "true";
+       header('Location: http://handersonsilva.com/login_face/');
     }
 ?>
 

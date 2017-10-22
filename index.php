@@ -1,4 +1,11 @@
+<?php
+    session_start();
+    $pageSucesso = isset($_SESSION['not_logged'])?$_SESSION['not_logged']:"";
+    if($pageSucesso == "true"){
+        echo "Realize login Para ter acesso a pagina 'sucesso.php'!";
+    }
 
+?>
 <!DOCTYPE html>
     <html>
         <head>
