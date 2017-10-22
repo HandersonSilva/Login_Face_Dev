@@ -1,3 +1,4 @@
+  
   var loginFace = "";
   // This is called with the results from from FB.getLoginStatus().
   function statusChangeCallback(response) {
@@ -19,38 +20,24 @@
                         alert(data);
                             //redirecionar para outra pagina
                         window.location = "http://handersonsilva.com/login_face/sucesso.php";
-                    },
-                    error: function (result) {
-                        // Como requisitar $resposta e mostrar ela aqui
                     }
                });      
             });  
     }
      if (response.status === 'not_authorized' || response.status === 'unknown' ) {
-       //resolvendo problema de carregamento da pagina
-       document.addEventListener("DOMContentLoaded", function(){
+             // The person is not logged into your app or we are unable to tell.
+        //resolvendo problema de carregamento da pagina
+          window.onload = function(){
             document.getElementById('status').innerHTML = 'Please log ' +
             'into this app.';
-       });
-          // The person is not logged into your app or we are unable to tell.
-         /* window.onload = function(){
-            document.getElementById('status').innerHTML = 'Please log ' +
-            'into this app.';
-          }*/
-      
-       // loginFacebook(); 
+          }
         } else{
 
             //resolvendo problema de carregamento da pagina
-            document.addEventListener("DOMContentLoaded", function(){
-                    document.getElementById('status').innerHTML = 'Please log ' +
-                    'into this app.';
-            });
-            /*
             window.onload = function(){
                 document.getElementById('status').innerHTML = 'Please log ' +
                 'into this app.';
-              }*/
+              }
           
         }
    
@@ -123,9 +110,6 @@ FB.getLoginStatus(function(response) {
 
 
 };
-
-
-
 
 // Load the SDK asynchronously
 (function(d, s, id) {

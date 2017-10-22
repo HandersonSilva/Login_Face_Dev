@@ -58,19 +58,12 @@ window.fbAsyncInit = function() {
         statusChangeCallback(response);
     });
 
+    //pegar o retorno do botão logout
     FB.Event.subscribe('auth.logout', function(response) {        
         window.location = "http://handersonsilva.com/login_face/";
       });
     
     };
-    
-   /* FB.logout(function(response) {
-        // user is now logged out
-        console.log("Retorno do logout= "+response);
-        
-          
-    });*/
-    
     
     // Load the SDK asynchronously
     (function(d, s, id) {
