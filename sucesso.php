@@ -15,12 +15,12 @@
         </head>
         <body>
        
-
+          <input type="button" onclick=" FB.logout();"/>
   
-            <fb:login-button autologoutlink="true" onclick=" FB.logout();">
+           <!-- <fb:login-button autologoutlink="true" onclick=" FB.logout();">
             </fb:login-button>
             
-         
+        -->
        
             <div id="status">
          

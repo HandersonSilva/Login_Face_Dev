@@ -16,7 +16,7 @@
                     data: {login:loginFace},
                     success:function(data){
                 
-                        alert("Logado"+" "+data);
+                        alert(data);
                             //redirecionar para outra pagina
                         window.location = "http://handersonsilva.com/login_face/sucesso.php";
                     },
