@@ -16,7 +16,7 @@
         <body>
        
   
-            <fb:login-button autologoutlink="true" onlogin="getLoginStatus(); ">
+            <fb:login-button autologoutlink="true" onlogin="checkLoginState();">
             </fb:login-button>
             
     
