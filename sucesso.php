@@ -15,7 +15,6 @@
         </head>
         <body>
        
-          <input type="button" onclick=" FB.logout();" value="Sair"/>
   
             <fb:login-button autologoutlink="true" onclick="getLoginStatus(); ">
             </fb:login-button>
