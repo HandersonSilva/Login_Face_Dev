@@ -26,7 +26,7 @@
                });      
             });  
     }
-     if (response.status === 'not_authorized') {
+     if (response.status === 'not_authorized' || response.status === 'unknown' ) {
        
           // The person is not logged into your app or we are unable to tell.
         document.getElementById('status').innerHTML = 'Please log ' +
@@ -55,7 +55,6 @@ function checkLoginState() {
 window.fbAsyncInit = function() {
 FB.init({
     appId      : '387714388328615',
-    secret     : 'e7c1a3a449ed2491a679c71cfbfada03',
     cookie     : true,  // enable cookies to allow the server to access 
                         // the session
     xfbml      : true,  // parse social plugins on this page
