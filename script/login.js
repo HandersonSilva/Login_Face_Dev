@@ -29,10 +29,19 @@
      if (response.status === 'not_authorized' || response.status === 'unknown' ) {
        
           // The person is not logged into your app or we are unable to tell.
-        document.getElementById('status').innerHTML = 'Please log ' +
-        'into this app.';
+          window.onload = function(){
+            document.getElementById('status').innerHTML = 'Please log ' +
+            'into this app.';
+          }
+      
        // loginFacebook(); 
-        } 
+        } else{
+            window.onload = function(){
+                document.getElementById('status').innerHTML = 'Please log ' +
+                'into this app.';
+              }
+          
+        }
    
     
     
