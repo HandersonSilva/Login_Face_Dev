@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    $statusLogin = isset($_SESSION['userLogin'])?$_SESSION['userLogin']:"";
+    if( $statusLogin != 'connected'){
+        header('Location: http://handersonsilva.com/login_face/');
+    }
+?>
 
 <!DOCTYPE html>
     <html>

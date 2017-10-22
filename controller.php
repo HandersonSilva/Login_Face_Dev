@@ -5,20 +5,13 @@
 
     if( $_SESSION['userLogin'] == 'connected'){
         loginSuccess();
-    }else{
-        loginFailed();
     }
 
 
 function loginSuccess(){
+    echo "logged with success!!!";
     //redirecionar para pagi
     require('sucesso.php');
-    echo "logged with success!!!";
+  
 
-}
-
-function  loginFailed(){
-    require('index.php');    
-
-    echo " Sorry, failed was in login ";
 }

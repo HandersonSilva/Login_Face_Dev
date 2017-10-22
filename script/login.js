@@ -17,7 +17,7 @@
                     success:function(data){
                 
                         alert("Logado"+" "+data);
-                        window.location = "sucesso.php";
+                       // window.location = "sucesso.php";
                     },
                     error: function (result) {
                         // Como requisitar $resposta e mostrar ela aqui
