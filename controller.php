@@ -10,8 +10,4 @@
 
 function loginSuccess(){
     echo "logged with success!!!";
-    //redirecionar para pagi
-    require('sucesso.php');
-  
-
 }

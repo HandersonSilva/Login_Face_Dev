@@ -17,20 +17,14 @@
                     success:function(data){
                 
                         alert("Logado"+" "+data);
-                       // window.location = "sucesso.php";
+                            //redirecionar para outra pagina
+                        window.location = "http://handersonsilva.com/login_face/sucesso.php";
                     },
                     error: function (result) {
                         // Como requisitar $resposta e mostrar ela aqui
                     }
                });      
-            });
-  
-    //redirecionar para outra pagina
-  
-   // window.location = "http://handersonsilva.com/login_face/sucesso.php";
-   
-
-   
+            });  
     }
      if (response.status === 'not_authorized') {
        
