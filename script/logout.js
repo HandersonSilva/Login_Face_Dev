@@ -73,14 +73,18 @@ window.fbAsyncInit = function() {
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
 
-    FB.Event.subscribe('auth.logout', logout_event);
+    FB.logout(function(response) {
+        // user is now logged out
+      });
+
+    FB.Event.subscribe('auth.logout', function(response) {
+        
+                console.log("logout_event");
+                console.log(response.status);
+                console.log(response);
+        
+                window.location = "http://handersonsilva.com/login_face/";
+    });
       
     
-    var logout_event = function(response) {
-
-        console.log("logout_event");
-        console.log(response.status);
-        console.log(response);
-
-        window.location = "http://handersonsilva.com/login_face/";
-    }
+  
