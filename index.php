@@ -8,7 +8,7 @@
         </head>
         <body>
          <!-- button Complete-->
-        <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="true" data-auto-logout-link="false" data-use-continue-as="true"></div>
+        <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" onlogin="checkLoginState();" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="true"></div>
         <br/>
              <div id="fb-root"></div>
 
