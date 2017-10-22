@@ -66,12 +66,12 @@ window.fbAsyncInit = function() {
     
     };
     
-    FB.logout(function(response) {
+   /* FB.logout(function(response) {
         // user is now logged out
         console.log("Retorno do logout= "+response);
         
           
-    });
+    });*/
     
     
     // Load the SDK asynchronously
