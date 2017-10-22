@@ -32,12 +32,7 @@
         document.getElementById('status').innerHTML = 'Please log ' +
         'into this app.';
        // loginFacebook(); 
-        } else{
-           
-        document.getElementById('status').innerHTML = 'Please log ' +
-        'into this app.';
-             
-        }
+        } 
    
     
     
