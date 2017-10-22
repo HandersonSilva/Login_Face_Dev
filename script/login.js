@@ -27,19 +27,30 @@
             });  
     }
      if (response.status === 'not_authorized' || response.status === 'unknown' ) {
-       
-          // The person is not logged into your app or we are unable to tell.
-          window.onload = function(){
+       //resolvendo problema de carregamento da pagina
+       document.addEventListener("DOMContentLoaded", function(){
             document.getElementById('status').innerHTML = 'Please log ' +
             'into this app.';
-          }
+       });
+          // The person is not logged into your app or we are unable to tell.
+         /* window.onload = function(){
+            document.getElementById('status').innerHTML = 'Please log ' +
+            'into this app.';
+          }*/
       
        // loginFacebook(); 
         } else{
+
+            //resolvendo problema de carregamento da pagina
+            document.addEventListener("DOMContentLoaded", function(){
+                    document.getElementById('status').innerHTML = 'Please log ' +
+                    'into this app.';
+            });
+            /*
             window.onload = function(){
                 document.getElementById('status').innerHTML = 'Please log ' +
                 'into this app.';
-              }
+              }*/
           
         }
    
