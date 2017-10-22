@@ -17,7 +17,7 @@
        
 
   
-            <fb:login-button autologoutlink="true">
+            <fb:login-button autologoutlink="true" onclick=" FB.logout();">
             </fb:login-button>
             
          

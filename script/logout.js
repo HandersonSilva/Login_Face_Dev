@@ -75,16 +75,14 @@ window.fbAsyncInit = function() {
 
     FB.logout(function(response) {
         // user is now logged out
+        window.location = "http://handersonsilva.com/login_face/";
+          
       });
 
-    FB.Event.subscribe('auth.logout', function(response) {
-        
-                console.log("logout_event");
-                console.log(response.status);
-                console.log(response);
-        
-                window.location = "http://handersonsilva.com/login_face/";
+      FB.Event.subscribe('auth.logout', function(response) {        
+      window.location = "http://handersonsilva.com/login_face/";
     });
-      
+
+  
     
   
