@@ -82,5 +82,5 @@ window.fbAsyncInit = function() {
         console.log(response.status);
         console.log(response);
 
-        window.location = "http://handersonsilva.com/Login_Face_Dev/";
+        window.location = "http://handersonsilva.com/login_face/";
     }
