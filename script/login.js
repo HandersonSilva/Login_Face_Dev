@@ -89,7 +89,7 @@ FB.getLoginStatus(function(response) {
         if (response.authResponse) {
       
         }       
-    });*/
+    });
     FB.Event.subscribe('auth.login', function () {
         loginFace = 'connected';
         $(function(){
@@ -107,7 +107,7 @@ FB.getLoginStatus(function(response) {
                 }
             });      
         });
-    });
+    });*/
    // }
 
 

@@ -14,7 +14,8 @@
             <script  src="script/jquery-3.2.1.min.js"></script>
         </head>
         <body>
-       
+                <div class="fb-login-button" data-max-rows="1" data-size="large"  data-show-faces="true" data-auto-logout-link="true" ></div>
+                <br/>     
   
             <fb:login-button autologoutlink="true" onclick="checkLoginState();">
             </fb:login-button>
