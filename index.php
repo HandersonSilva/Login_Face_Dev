@@ -4,6 +4,7 @@
         <head>
             <title>Login usando Facebook</title>
             <script type="text/javascript" src="script/login.js"></script>
+            <script  src="script/jquery-3.2.1.min.js"></script>
         </head>
         <body>
        
